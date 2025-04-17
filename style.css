@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(210, 50%, 95%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: hsl(223, 100%, 64%);
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+form {
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px hsl(0, 0%, 0%, 0.15);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#textBox {
+    width: 70%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid hsl(223, 80%, 80%);
+    border-radius: 8px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+#textBox:focus {
+    outline: none;
+    border-color: hsl(223, 100%, 64%);
+    box-shadow: 0 0 0 3px hsla(223, 100%, 64%, 0.2);
+}
+
+.input-tooltip {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: hsl(223, 50%, 50%);
+    opacity: 0.8;
+}
+
+.conversion-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto 20px;
+    max-width: 250px;
+    gap: 8px;
+}
+
+.conversion-options div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 8px;
+    color: hsl(223, 30%, 40%);
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+button {
+    margin-top: 15px;
+    background-color: hsl(223, 100%, 64%);
+    font-size: 1.5em;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px hsla(223, 100%, 50%, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(223, 100%, 55%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px hsla(223, 100%, 50%, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px hsla(223, 100%, 50%, 0.3);
+}
+
+.result-container {
+    border-top: 1px solid hsl(0, 0%, 90%);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+#result {
+    font-size: 2em;
+    font-weight: bold;
+    color: hsl(223, 80%, 50%);
+    margin: 5px 0;
+    min-height: 44px;
+}
+
+.formula {
+    font-size: 0.9em;
+    color: hsl(223, 20%, 60%);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.common-temps {
+    border-top: 1px solid hsl(0, 0%, 90%);
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.common-temps h3 {
+    color: hsl(223, 80%, 60%);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.common-temps ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.common-temps li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
