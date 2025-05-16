@@ -12,11 +12,11 @@ A simple web application to convert temperatures between Celsius, Fahrenheit, an
 
 ## Installation Instructions
 
+
 1. **Clone the repository**
    ```bash
-  git clone https://github.com/shreyaillur14/temp_converter.git
-  cd temp_converter
-  ```
+   git clone https://github.com/shreyaillur14/temp_converter.git
+   cd temp_converter
 
 
 2. Just open the index.html file in your web browser:
