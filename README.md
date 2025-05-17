@@ -32,5 +32,5 @@ A simple web application to convert temperatures between Celsius, Fahrenheit, an
 
 ## Deployment
 
-This project is deployed on Netlify. You can view the live version at project3-temp-conv-frontend.netlify.app
+This project is deployed on Netlify. You can view the live version at https://project3-temp-conv-frontend.netlify.app/
  
