@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: hsl(210, 50%, 95%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, hsl(210, 50%, 95%), hsl(223, 50%, 90%));
     margin: 0;
     padding: 20px;
     display: flex;
@@ -12,23 +12,26 @@ body {
 h1 {
     color: hsl(223, 100%, 64%);
     margin-top: 0;
-    font-size: 1.8em;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 form {
-    background-color: hsl(0, 0%, 100%);
+    background: rgba(255, 255, 255, 0.95);
     text-align: center;
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
     margin: auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px hsl(0, 0%, 0%, 0.15);
-    transition: transform 0.3s ease;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px hsla(223, 50%, 50%, 0.2);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
 }
 
 form:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px hsla(223, 50%, 50%, 0.25);
 }
 
 .input-container {
@@ -37,20 +40,21 @@ form:hover {
 }
 
 #textBox {
-    width: 70%;
+    width: 75%;
     text-align: center;
-    font-size: 2em;
-    border: 2px solid hsl(223, 80%, 80%);
-    border-radius: 8px;
-    padding: 10px;
-    transition: border-color 0.3s ease;
-    box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.1);
+    font-size: 2.2em;
+    border: 3px solid hsl(223, 80%, 80%);
+    border-radius: 12px;
+    padding: 12px;
+    transition: all 0.3s ease;
+    background: hsl(210, 50%, 98%);
 }
 
 #textBox:focus {
     outline: none;
     border-color: hsl(223, 100%, 64%);
-    box-shadow: 0 0 0 3px hsla(223, 100%, 64%, 0.2);
+    box-shadow: 0 0 0 4px hsla(223, 100%, 64%, 0.2);
+    transform: scale(1.02);
 }
 
 .input-tooltip {
@@ -64,20 +68,20 @@ form:hover {
 }
 
 .conversion-options {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 auto 20px;
-    max-width: 250px;
-    gap: 8px;
+    background: hsl(210, 50%, 98%);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 25px auto;
+    box-shadow: inset 0 2px 6px hsla(0, 0%, 0%, 0.08);
 }
 
 .conversion-options div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    width: 100%;
-    text-align: left;
+    padding: 8px 0;
+    transition: transform 0.2s ease;
+}
+
+.conversion-options div:hover {
+    transform: translateX(5px);
 }
 
 label {
@@ -94,22 +98,23 @@ input[type="radio"] {
 }
 
 button {
-    margin-top: 15px;
-    background-color: hsl(223, 100%, 64%);
-    font-size: 1.5em;
+    margin-top: 20px;
+    background: linear-gradient(135deg, hsl(223, 100%, 64%), hsl(223, 100%, 55%));
+    font-size: 1.6em;
+    font-weight: 600;
     border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
+    padding: 15px 40px;
+    border-radius: 12px;
     color: white;
     cursor: pointer;
-    box-shadow: 0 4px 8px hsla(223, 100%, 50%, 0.3);
+    box-shadow: 0 4px 15px hsla(223, 100%, 50%, 0.3);
     transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: hsl(223, 100%, 55%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px hsla(223, 100%, 50%, 0.4);
+    background: linear-gradient(135deg, hsl(223, 100%, 60%), hsl(223, 100%, 50%));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px hsla(223, 100%, 50%, 0.4);
 }
 
 button:active {
@@ -124,11 +129,12 @@ button:active {
 }
 
 #result {
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: bold;
     color: hsl(223, 80%, 50%);
-    margin: 5px 0;
-    min-height: 44px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin: 15px 0;
+    min-height: 50px;
 }
 
 .formula {
@@ -136,28 +142,4 @@ button:active {
     color: hsl(223, 20%, 60%);
     font-style: italic;
     margin-top: 5px;
-}
-
-.common-temps {
-    border-top: 1px solid hsl(0, 0%, 90%);
-    margin-top: 20px;
-    padding-top: 10px;
-    text-align: left;
-}
-
-.common-temps h3 {
-    color: hsl(223, 80%, 60%);
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.common-temps ul {
-    padding-left: 20px;
-    margin-top: 5px;
-}
-
-.common-temps li {
-    margin-bottom: 5px;
-    font-size: 0.9em;
 }

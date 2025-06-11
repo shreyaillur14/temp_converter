@@ -7,24 +7,6 @@ const fromKelvin = document.getElementById("fromKelvin");
 const result = document.getElementById("result");
 const formula = document.getElementById("formula");
 const convertBtn = document.getElementById("convertBtn");
-const commonTemps = document.getElementById("commonTemps");
-
-// Common temperatures to display
-const commonTemperatures = [
-    { temp: "0°C", desc: "Water freezing point (32°F, 273.15K)" },
-    { temp: "20°C", desc: "Room temperature (68°F, 293.15K)" },
-    { temp: "37°C", desc: "Body temperature (98.6°F, 310.15K)" },
-    { temp: "100°C", desc: "Water boiling point (212°F, 373.15K)" }
-];
-
-// Initialize common temperatures list
-function initCommonTemps() {
-    commonTemperatures.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = `${item.temp} - ${item.desc}`;
-        commonTemps.appendChild(li);
-    });
-}
 
 // Input validation helper
 function validateInput(value) {
@@ -105,9 +87,6 @@ textBox.addEventListener("keyup", function(event) {
 
 // Initialize with a default checked option
 toFahrenheit.checked = true;
-
-// Initialize common temperatures
-initCommonTemps();
 
 // CSS animation for the result
 document.head.insertAdjacentHTML("beforeend", `
